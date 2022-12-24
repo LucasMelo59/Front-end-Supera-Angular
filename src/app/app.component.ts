@@ -57,7 +57,6 @@ export class AppComponent implements OnInit {
         data_fim: formattedDate_fim,
         conta_id: this.markerGroup.value.conta_id
       }
-      console.log(model);
 
       this.service.filterTable(model)
       .pipe(
