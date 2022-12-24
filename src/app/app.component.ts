@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
     data_fim: null,
     conta_id: null
   }
+
    this.service.filterTable(model)
    .pipe(
     catchError(err => {
@@ -46,7 +47,7 @@ export class AppComponent implements OnInit {
 
     submit(){
       const model: any = {
-        nome_operador: this.markerGroup.value.nome_operador,
+        nome_operador: this.markerGroup.value.nome_operador == '' ? null : this.markerGroup.value.nome_operador,
         data_inicio: this.markerGroup.value.data_inicio,
         data_fim: this.markerGroup.value.data_fim,
         conta_id: this.markerGroup.value.conta_id
