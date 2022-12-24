@@ -6,13 +6,11 @@
         <input type="text" class="form-control" formControlName="nome_operador"  placeholder="Nome Operador" >
       </div>
       <div class="col-auto">
-        <label  class="visually-hidden">data</label>
-        <input type="date" class="form-control" formControlName="data_inicio" placeholder="Data Inicio" >
-      </div>
-      <div class="col-auto">
-        <label  class="visually-hidden">data</label>
-        <input type="date" class="form-control" formControlName="data_fim"  placeholder="Data fim">
-      </div>
+        <p-calendar formControlName="data_inicio" dateFormat="dd/mm/yy" placeholder="Data final"  [showTime]="true" inputId="time_inicio"></p-calendar>
+    </div>
+    <div class="col-auto">
+      <p-calendar formControlName="data_fim" dateFormat="dd/mm/yy" placeholder="Data Inicio" [showTime]="true" inputId="time_fim"></p-calendar>
+  </div>
       <div class="col-auto">
         <button type="submit" (click)="submit()" class="btn btn-primary mb-3">Pesquisar</button>
       </div>
